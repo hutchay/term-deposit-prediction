@@ -39,6 +39,28 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 ```
 Then open the notebook in Jupyter or Google Colab and run all cells.
 
+### 🎯 Business Context
+The goal was to predict whether a customer would subscribe to a term deposit offer, based on demographic and campaign-related features. The challenge: only a small percentage of customers said “yes” — making it a classic imbalanced classification problem.
+
+### 📈 Model Findings
+- The logistic regression model achieved an accuracy of 71%, but more importantly:
+  - Precision (Subscribed): 22%
+  - Recall (Subscribed): 62%
+- This shows that:
+  - While many predicted "yes" may be false positives, we are correctly identifying over 60% of customers who would actually subscribe.
+  - This is useful in a marketing context, where recall is more important — better to reach out to most potential subscribers, even if some don’t convert.
+
+### 🔍 Key Factors Driving Subscription
+- Customers contacted via cellular were more likely to subscribe.
+- Higher education levels and no history of default also contributed to higher subscription rates.
+- Duration was excluded from the model to avoid data leakage, though it’s known to be highly predictive.
+
+### ✅ What This Means
+This model can help the bank:
+- Prioritize leads for sales teams.
+- Refine marketing efforts by targeting specific demographics.
+- Reduce campaign costs by avoiding outreach to low-likelihood customers.
+
 ## 📌 Insights & Conclusion
 
 - The logistic regression model reached **71% accuracy** with **62% recall** for the minority class (subscribed customers), showing strong potential to capture real positives despite class imbalance.

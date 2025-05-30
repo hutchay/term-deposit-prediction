@@ -24,10 +24,24 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
 - ROC-AUC: _(you can calculate and insert this)_
 
 ## 📊 Visuals
-- Subscription class distribution
+- Subscription class distribution 
+
+![image](https://github.com/user-attachments/assets/adc3b95b-4f6a-4f02-a5c3-6ee81b54657d)
+ 
 - Confusion Matrix
+
+  
+![image](https://github.com/user-attachments/assets/d4c369d3-5bcd-4637-a8a8-dae2f24deadc)
+
 - ROC Curve
+
+  
+![image](https://github.com/user-attachments/assets/b6675d7b-a073-4a88-9143-51dc7d116943)
+
 - Classification report
+
+
+  ![image](https://github.com/user-attachments/assets/ac4ab450-3306-4282-982e-c2404463c373)
 
 ## 📁 Files
 - `Term_Deposit_Prediction_BankMarketing.ipynb` – Full Jupyter notebook with code and results

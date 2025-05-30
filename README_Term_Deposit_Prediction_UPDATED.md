@@ -46,7 +46,3 @@ Then open the notebook in Jupyter or Google Colab and run all cells.
 - Features like **contact method**, **education**, and **loan/default history** are key drivers in predicting success.
 - This model can help the bank **prioritize outreach**, **refine targeting**, and **increase campaign efficiency**.
 
-## ✅ Next Steps
-- Try additional models like XGBoost or SVM
-- Add SHAP for explainable AI
-- Deploy model via Streamlit

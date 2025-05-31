@@ -53,6 +53,8 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 ```
 Then open the notebook in Jupyter or Google Colab and run all cells.
 
+## 🧠 Interpretation of Results
+
 ### 🎯 Business Context
 The goal was to predict whether a customer would subscribe to a term deposit offer, based on demographic and campaign-related features. The challenge: only a small percentage of customers said “yes” — making it a classic imbalanced classification problem.
 

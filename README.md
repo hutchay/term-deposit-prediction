@@ -19,11 +19,6 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
 - Decision Tree model evaluation with classification report and confusion matrix
 - Random Forest model evaluation with classification report and confusion matrix
 
-## 📈 Performance Snapshot
-- Accuracy: 71%
-- Precision (Subscribed): 0.22
-- Recall (Subscribed): 0.62
-
 ## 📊 Visuals
 - Subscription class distribution 
 
@@ -46,11 +41,10 @@ Logistic Regression
   ![image](https://github.com/user-attachments/assets/80be9641-7e18-4bd2-9721-60733024a336)
 
 
-- Classification report
+## 📈 Performance Snapshot - Classification report
 
 
   ![image](https://github.com/user-attachments/assets/c973ca00-d13d-4ca3-9837-dfe32fa10379)
-
 
 
 ## 📁 Files

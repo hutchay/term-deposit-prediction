@@ -15,9 +15,8 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
 - Exploratory Data Analysis (EDA)
 - Feature engineering and scaling
 - Handling class imbalance with `class_weight='balanced'`
-- Logistic Regression model evaluation with classification report, confusion matrix, and ROC curve
-- Decision Tree model evaluation with classification report and confusion matrix
-- Random Forest model evaluation with classification report and confusion matrix
+- Logistic Regression, Decision Tree, and Random Forest models
+- Model evaluation using classification report, confusion matrix, and ROC-AUC
 
 ## 📊 Visuals
 - Subscription class distribution 
@@ -63,29 +62,31 @@ Then open the notebook in Jupyter or Google Colab and run all cells.
 The goal was to predict whether a customer would subscribe to a term deposit offer, based on demographic and campaign-related features. The challenge: only a small percentage of customers said “yes” — making it a classic imbalanced classification problem.
 
 ### 📈 Model Findings
-- Logistic Regression achieved a recall of 62%, meaning it successfully identified over half of actual subscribers — crucial for marketing outreach.
+- Logistic Regression achieved the best balance for this use case with 62% recall, ideal for identifying likely subscribers.
 
 - Decision Tree performed well in terms of accuracy but had lower recall, limiting its usefulness for identifying "yes" customers.
 
 - Random Forest had the highest precision and accuracy but the lowest recall (11%), meaning it missed most of the actual subscribers — not ideal for this use case.
 
 ### 🔍 Key Factors Driving Subscription
-- Customers contacted via cellular were more likely to subscribe.
-- Higher education levels and no history of default also contributed to higher subscription rates.
-- Duration was excluded from the model to avoid data leakage, though it’s known to be highly predictive.
+- Contact method (cellular)
+- Education level
+- Credit default history
+  
+ _Note: `duration` was excluded to prevent data leakage._
 
 ### ✅ What This Means
-- Logistic Regression or a hybrid ensemble can be used if recall (reaching likely subscribers) is the priority.
+- Logistic Regression or an ensemble method that prioritizes recall is recommended when the goal is to identify as many potential subscribers as possible..
 
-- This model can help the bank:
-  - Prioritize leads for sales teams.
-  - Refine marketing efforts by targeting specific demographics.
-  - Reduce campaign costs by avoiding outreach to low-likelihood customers.
-
-## 📌 Insights & Conclusion
+- These models help the bank:
+  - Prioritize high-potential customers.
+  - Tailor campaigns to effective segments.
+  - Reduce wasted effort and cost
+ 
+ ## 📌 Insights & Conclusion
 
 - The project demonstrates how different models can trade off recall vs. precision — an important business decision point.
-- Logistic Regression, though simpler, offered the best recall-to-precision tradeoff, making it more effective in this marketing scenario.
+- Logistic Regression, while simple, achieved the best trade-off between recall and precision.
 - Strategic features like contact method, education, and loan history were the strongest predictors of term deposit subscription.
 - Features like **contact method**, **education**, and **loan/default history** are key drivers in predicting success.
 - This model can help the bank **prioritize outreach**, **refine targeting**, and **increase campaign efficiency**.

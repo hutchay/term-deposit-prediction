@@ -1,9 +1,9 @@
- 📊 Term Deposit Subscription Prediction – Bank Marketing Dataset
+## 📊 Term Deposit Subscription Prediction – Bank Marketing Dataset
 
 This project uses classification models to predict whether a customer will subscribe to a term deposit based on a variety of demographic and campaign-related factors.
 
 ## 🧠 Objective
-To build a predictive model using the Bank Marketing dataset (2015–2017) to support marketing decision-making.
+To build a predictive model using the Bank Marketing dataset (2015–2017) to support marketing decision-making through data-driven insights.
 
 ## 🛠️ Tools Used
 - Python
@@ -23,7 +23,7 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
 
 ![image](https://github.com/user-attachments/assets/adc3b95b-4f6a-4f02-a5c3-6ee81b54657d)
  
-- Confusion Matrix
+- Confusion Matrices
 
 Logistic Regression  
 ![image](https://github.com/user-attachments/assets/87d9b121-0116-4132-8e8a-69a4972d9cf5)
@@ -87,6 +87,5 @@ The goal was to predict whether a customer would subscribe to a term deposit off
 
 - The project demonstrates how different models can trade off recall vs. precision — an important business decision point.
 - Logistic Regression, while simple, achieved the best trade-off between recall and precision.
-- Strategic features like contact method, education, and loan history were the strongest predictors of term deposit subscription.
-- Features like **contact method**, **education**, and **loan/default history** are key drivers in predicting success.
-- This model can help the bank **prioritize outreach**, **refine targeting**, and **increase campaign efficiency**.
+- Key features like contact method, education, and loan history were the strongest predictors of term deposit subscription.
+- These models can help the bank **prioritize outreach**, **refine targeting**, and **increase campaign efficiency**.

@@ -16,12 +16,13 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
 - Feature engineering and scaling
 - Handling class imbalance with `class_weight='balanced'`
 - Logistic Regression model evaluation with classification report, confusion matrix, and ROC curve
+- Decision Tree model evaluation with classification report and confusion matrix
+- Random Forest model evaluation with classification report and confusion matrix
 
 ## 📈 Performance Snapshot
 - Accuracy: 71%
 - Precision (Subscribed): 0.22
 - Recall (Subscribed): 0.62
-- ROC-AUC: _(you can calculate and insert this)_
 
 ## 📊 Visuals
 - Subscription class distribution 
@@ -30,18 +31,27 @@ To build a predictive model using the Bank Marketing dataset (2015–2017) to su
  
 - Confusion Matrix
 
-  
-![image](https://github.com/user-attachments/assets/d4c369d3-5bcd-4637-a8a8-dae2f24deadc)
+Logistic Regression  
+![image](https://github.com/user-attachments/assets/87d9b121-0116-4132-8e8a-69a4972d9cf5)
 
-- ROC Curve
+
+- Decision Tree
 
   
-![image](https://github.com/user-attachments/assets/b6675d7b-a073-4a88-9143-51dc7d116943)
+![image](https://github.com/user-attachments/assets/655caf7e-bdca-4ab7-9624-9e50158ee382)
+
+
+- Random Forest
+
+  ![image](https://github.com/user-attachments/assets/80be9641-7e18-4bd2-9721-60733024a336)
+
 
 - Classification report
 
 
-  ![image](https://github.com/user-attachments/assets/ac4ab450-3306-4282-982e-c2404463c373)
+  ![image](https://github.com/user-attachments/assets/c973ca00-d13d-4ca3-9837-dfe32fa10379)
+
+
 
 ## 📁 Files
 - `Term_Deposit_Prediction_BankMarketing.ipynb` – Full Jupyter notebook with code and results
@@ -59,12 +69,11 @@ Then open the notebook in Jupyter or Google Colab and run all cells.
 The goal was to predict whether a customer would subscribe to a term deposit offer, based on demographic and campaign-related features. The challenge: only a small percentage of customers said “yes” — making it a classic imbalanced classification problem.
 
 ### 📈 Model Findings
-- The logistic regression model achieved an accuracy of 71%, but more importantly:
-  - Precision (Subscribed): 22%
-  - Recall (Subscribed): 62%
-- This shows that:
-  - While many predicted "yes" may be false positives, we are correctly identifying over 60% of customers who would actually subscribe.
-  - This is useful in a marketing context, where recall is more important — better to reach out to most potential subscribers, even if some don’t convert.
+- Logistic Regression achieved a recall of 62%, meaning it successfully identified over half of actual subscribers — crucial for marketing outreach.
+
+- Decision Tree performed well in terms of accuracy but had lower recall, limiting its usefulness for identifying "yes" customers.
+
+- Random Forest had the highest precision and accuracy but the lowest recall (11%), meaning it missed most of the actual subscribers — not ideal for this use case.
 
 ### 🔍 Key Factors Driving Subscription
 - Customers contacted via cellular were more likely to subscribe.
@@ -72,14 +81,17 @@ The goal was to predict whether a customer would subscribe to a term deposit off
 - Duration was excluded from the model to avoid data leakage, though it’s known to be highly predictive.
 
 ### ✅ What This Means
-This model can help the bank:
-- Prioritize leads for sales teams.
-- Refine marketing efforts by targeting specific demographics.
-- Reduce campaign costs by avoiding outreach to low-likelihood customers.
+- Logistic Regression or a hybrid ensemble can be used if recall (reaching likely subscribers) is the priority.
+
+- This model can help the bank:
+  - Prioritize leads for sales teams.
+  - Refine marketing efforts by targeting specific demographics.
+  - Reduce campaign costs by avoiding outreach to low-likelihood customers.
 
 ## 📌 Insights & Conclusion
 
-- The logistic regression model reached **71% accuracy** with **62% recall** for the minority class (subscribed customers), showing strong potential to capture real positives despite class imbalance.
-- High recall is crucial in this marketing scenario, where reaching likely subscribers matters more than being perfectly precise.
+- The project demonstrates how different models can trade off recall vs. precision — an important business decision point.
+- Logistic Regression, though simpler, offered the best recall-to-precision tradeoff, making it more effective in this marketing scenario.
+- Strategic features like contact method, education, and loan history were the strongest predictors of term deposit subscription.
 - Features like **contact method**, **education**, and **loan/default history** are key drivers in predicting success.
 - This model can help the bank **prioritize outreach**, **refine targeting**, and **increase campaign efficiency**.
